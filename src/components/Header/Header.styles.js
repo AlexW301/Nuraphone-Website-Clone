@@ -34,6 +34,10 @@ export const NavBarWrapper = styled.div`
         margin: 0 6.5px;
     }
 
+    li:hover {
+        opacity: .7;
+    }
+
     a:link,
     a:visited {
         font-size: 1.6rem;
@@ -44,7 +48,7 @@ export const NavBarWrapper = styled.div`
 
     a span {
         font-size: 1.6rem;
-        font-weight: 600;
+        font-weight: 400;
         color: #000000;
     }
 
