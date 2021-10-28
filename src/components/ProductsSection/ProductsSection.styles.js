@@ -3,6 +3,22 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     max-width: 1200px;
     margin: 0 auto;
+
+    .content-link:link,
+    .content-link:visited {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .content-link:hover,
+    .content-link:active {
+        opacity: .8;
+
+        .product-heading,
+        .product-description {
+            opacity: .8;
+        }
+    }
 `;
 
 export const Content = styled.div`
