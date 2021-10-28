@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     height: 55px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: block;
+    border-bottom: 1px solid #f8f8f8;
 `;
 
 export const Content = styled.div`
