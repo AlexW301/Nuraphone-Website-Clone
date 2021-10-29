@@ -33,6 +33,7 @@ export const Content = styled.div`
         font-size: 1.6rem;
         margin-top: 12px;
         margin-bottom: 12px;
+        color: #666666;
     }
 
     .learn-more-btn:link,
@@ -51,6 +52,6 @@ export const Content = styled.div`
 
     .learn-more-btn:hover,
     .learn-more-btn:active {
-        
+        background-color: rgb(15, 107, 255, 0.08);
     }
 `;
