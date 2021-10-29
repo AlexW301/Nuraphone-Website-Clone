@@ -27,6 +27,14 @@ export const Content = styled.div`
             
         }
     }
+
+    .quote-1 {
+
+    }
+
+    .quote-2 {
+        display: none;
+    }
 `;
 
 export const Quote = styled.div`
