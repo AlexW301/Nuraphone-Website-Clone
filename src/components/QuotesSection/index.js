@@ -9,9 +9,9 @@ const QuotesSection = () => {
     const [currentQuote, updateCurrentQuote] = useState(1);
 
     useEffect(() => {
-
+        
     }, [currentQuote])
-    
+
     return (
         <Wrapper>
             <Content>
