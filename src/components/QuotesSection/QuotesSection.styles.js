@@ -28,21 +28,28 @@ export const Content = styled.div`
         }
     }
 
-    .quote-1 {
-
+    .quote {
+        display: none;
     }
 
-    .quote-2 {
-        display: none;
+    .active {
+        display: block;
+        animation: slide .3s;
+
+        @keyframes slide {
+            0% { opacity: 0; -webkit-transform: translateX(-100%); }   
+            100% { opacity: 1; -webkit-transform: translateX(0); }
+        }
     }
 `;
 
 export const Quote = styled.div`
-    .quote {
+    .quote-content {
         font-size: 5rem;
         color: #FFFFFF;
         text-align: center;
         margin: 0 0 40px;
+        width: 1000px;
     }
 
     .author {
