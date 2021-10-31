@@ -15,16 +15,28 @@ export const Wrapper = styled.div`
         color: #074dff;
         font-size: 3rem;
         width: 1420px;
-        padding: 0 225px;
+        padding: 0 228px;
     }
 
-    div ul {
+    .slider-btns {
         display: flex;
+        margin-top: 100px;
+        gap: 20px;
     }
 
-    div ul li button {
+    .slider-btns button {
         color: #fff;
-        font-size: 3rem;
+        display: inline-block;
+        cursor: pointer;
+        padding: 4px;
+        width: auto;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,.4);
+    }
+
+    .slider-btns button:focus {
+        background-color: #fff;
     }
 `;
 
@@ -37,7 +49,7 @@ export const Content = styled.div`
     gap: 300px;
     position: relative;
    
-    transition: transform ease-out .5s;
+    transition: transform ease-out 2000ms;
     transform: translateX(-2240px);
     
 `;
@@ -53,10 +65,18 @@ export const BlogPost = styled.div`
     
 
     img {
-        width: 500px;
+        height: 480px;
+        width: 480px;
+        object-fit: cover;
     }
 
     .pic-one {
+        height: 480px;
+        width: 480px;
+        object-fit: cover;
+    }
+
+    .pic-two {
         height: 480px;
         width: 480px;
         object-fit: cover;
@@ -69,6 +89,9 @@ export const BlogPost = styled.div`
     .post-content {
         width: 405px;
         height: 459.19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .post-heading {
@@ -88,6 +111,7 @@ export const BlogPost = styled.div`
 
     .link:link,
     .link:visited { 
+        width: fit-content;
         font-size: 1.8rem;
         text-decoration: none;
         border-bottom: 1px solid #fff;
