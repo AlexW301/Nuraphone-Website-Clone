@@ -17,9 +17,19 @@ export const Content = styled.div`
 `;
 
 export const BlogPost = styled.div`
-    width: 1120px;
+    min-width: 1120px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+
+    img {
+        width: 500px;
+    }
+
+    .slide {
+        transition: transform ease-out .5s;
+        transform: translateX(-1120px);
+    }
 `;
