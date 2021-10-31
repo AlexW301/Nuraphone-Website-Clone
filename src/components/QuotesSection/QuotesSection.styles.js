@@ -16,8 +16,8 @@ export const Content = styled.div`
     max-width: 65%;
 
     button {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -30,20 +30,31 @@ export const Content = styled.div`
 
     .quote {
         display: none;
+        
     }
 
     .active {
         display: block;
-        animation: slide .3s;
+        animation: slideIn .3s ease-in;
 
-        @keyframes slide {
-            0% { opacity: 0; -webkit-transform: translateX(-100%); }   
+        @keyframes slideIn {
+            0% { opacity: 0; -webkit-transform: translateX(30%); }   
             100% { opacity: 1; -webkit-transform: translateX(0); }
+        }
+    }
+
+    .active-back {
+        display: block;
+        animation: slideOut .3s ease-out;
+        @keyframes slideOut {
+            0% { opacity: 1; -webkit-transform: translateX(0); display: block;}   
+            100% { opacity: 0; -webkit-transform: translateX(30%); display: block }
         }
     }
 `;
 
 export const Quote = styled.div`
+    text-align: center;
     .quote-content {
         font-size: 5rem;
         color: #FFFFFF;
@@ -57,5 +68,16 @@ export const Quote = styled.div`
         color: #FFFFFF;
         text-align: center;
         margin: 0;
+    }
+
+    .forbes-img{
+        height: 26.13px;
+        width: 100px;
+        margin: 0;
+    }
+
+    .wired-img {
+        height: 29.13px;
+        width: 130px;
     }
 `;

@@ -11,7 +11,7 @@ const ProductCard = ({image, name, desc, link}) => {
             <Content>
                 <h3 className="product-heading"><strong>nura</strong>{name}</h3>
                 <p className="product-description">{desc}</p>
-                <a href={link} className="learn-more-btn">Learn more</a>
+                <p className="learn-more-btn">Learn more</p>
             </Content>
             </a>
         </Wrapper>

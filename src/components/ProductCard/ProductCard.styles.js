@@ -36,8 +36,7 @@ export const Content = styled.div`
         color: #666666;
     }
 
-    .learn-more-btn:link,
-    .learn-more-btn:visited {
+    .learn-more-btn {
         text-decoration: none;
         font-size: 1.6rem;
         background-color: transparent;
@@ -50,8 +49,7 @@ export const Content = styled.div`
         margin-top: 15px;
     }
 
-    .learn-more-btn:hover,
-    .learn-more-btn:active {
+    .learn-more-btn:hover {
         background-color: rgb(15, 107, 255, 0.08);
     }
 `;
