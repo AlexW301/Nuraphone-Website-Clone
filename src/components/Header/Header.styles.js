@@ -27,6 +27,10 @@ export const Content = styled.div`
         width: 38px;
     }
 
+    @media screen and (max-width: 1115px) {
+        width: 900px;
+    }
+
 `;
 
 export const NavBarWrapper = styled.div`
@@ -69,6 +73,17 @@ export const NavBarWrapper = styled.div`
         transform: translate(0, -2px);
         line-height: 15px;
         font-weight: 700;
+    }
+
+    @media screen and (max-width: 1115px) {
+        a:link,
+        a:visited {
+            font-size: 1.2rem;
+        }
+
+        a span {
+            font-size: 1.2rem;
+        }
     }
 `;
 

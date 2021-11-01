@@ -5,23 +5,31 @@ import {Wrapper, Content, BlogPost} from "./BlogSection.styles";
 
 const BlogSection = () => {
     const slideShow = useRef(null);
-    const [currentSlide, setCurrentSlide] = useState(0);
+    // const [screenChange, setScreenChange] = useState(false);
+
+    // const screenDidChange = () => {
+    //     setTimeout(() => {
+    //         setScreenChange(true);
+    //     }, 5000)
+    // }
+
+    // window.addEventListener('resize', screenDidChange) 
 
     const changeSlide = (slide) => {
+        slideShow.current.style.gap = `${vw-1420}px`;
         slideShow.current.style.transform = `translateX(${slide}px)`;
-        setCurrentSlide(slide)
     }
 
-    useEffect(() => {
-        setTimeout(() => {
-            if(currentSlide !== -8600) {
-                const newSlide = currentSlide - 1720
-                changeSlide(newSlide)
-            } else {
-                changeSlide(0)
-            }
-        }, 100000)
-    },[currentSlide])
+    let vw = window.innerWidth;
+    
+    // useEffect(() => {
+    //     if (screenChange) {
+    //         let newvw = window.innerWidth;
+    //         slideShow.current.style.gap = `${newvw-1420}px`;
+    //         slideShow.current.style.transform = `translateX(0px)`;
+    //         setScreenChange(false);
+    //     }
+    // },[screenChange])
 
     return (
         <Wrapper>
@@ -84,11 +92,11 @@ const BlogSection = () => {
             </Content>
                 <div className="slider-btns">
                     <button onClick={() => {changeSlide(0)}}></button>
-                    <button onClick={() => {changeSlide(-1720)}}></button>
-                    <button onClick={() => {changeSlide(-3440)}}></button>
-                    <button onClick={() => {changeSlide(-5160)}}></button>
-                    <button onClick={() => {changeSlide(-6880)}}></button>
-                    <button onClick={() => {changeSlide(-8600)}}></button>
+                    <button onClick={() => {changeSlide(-vw)}}></button>
+                    <button onClick={() => {changeSlide(-vw*2)}}></button>
+                    <button onClick={() => {changeSlide(-vw*3)}}></button>
+                    <button onClick={() => {changeSlide(-vw*4)}}></button>
+                    <button onClick={() => {changeSlide(-vw*5)}}></button>
                 </div>
         </Wrapper>
     )

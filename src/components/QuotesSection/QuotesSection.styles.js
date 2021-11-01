@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
     height: 426px;
     background-color: #191919;
     padding: 100px 0 110px;
+    background-color: #191919;
 `;
 
 export const Content = styled.div`
@@ -14,6 +15,7 @@ export const Content = styled.div`
     height: 100%;
     margin: 0 auto;
     max-width: 65%;
+    background-color: #191919;
 
     button {
         height: 30px;

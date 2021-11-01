@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     .nurablog {
         color: #074dff;
@@ -46,12 +47,11 @@ export const Content = styled.div`
     margin: 0 351.5px;
     padding: 0 40px;
     display: flex;
-    gap: 300px;
+    gap: 2000px;
     position: relative;
    
-    transition: transform ease-out 2000ms;
-    transform: translateX(-2240px);
-    
+    transition: transform ease-out 1500ms;
+    transform: translateX(0px);
 `;
 
 export const BlogPost = styled.div`
