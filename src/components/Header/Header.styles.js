@@ -5,9 +5,17 @@ export const Wrapper = styled.div`
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 99;
-    display: block;
+    z-index: 99999;
+    display: flex;
     border-bottom: 1px solid #f8f8f8;
+
+    @media screen and (max-width: 990px) {
+        padding: 0 18px 0 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 10px 0 10px;
+    }
 `;
 
 export const Content = styled.div`
@@ -16,6 +24,7 @@ export const Content = styled.div`
     align-items: center;
     width: 1120px;
     margin: 0 auto;
+    position: relative;
 
     .company-logo {
         height: 28.8x;
@@ -27,13 +36,80 @@ export const Content = styled.div`
         width: 38px;
     }
 
-    @media screen and (max-width: 1115px) {
+    .menu-icon {
+        height: 24px;
+        width: 24px;
+        display: none;
+    }
+
+    @media screen and (max-width: 1125px) {
         width: 900px;
+    }
+
+    @media screen and (max-width: 990px) {
+
+        .cart-and-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .menu-icon {
+            display: block;
+            padding: 16px;
+            box-sizing: content-box;
+        }
+
+        .menu {
+            display: none;
+            z-index: 9;
+            position: relative;
+        }
+
+        .mobile-menu {
+            display: inline-block;
+            position: absolute;
+            top: 55px;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: #c8c8c8;
+            height: 100vh;
+            width: 88%;
+            animation: slideIn .3s ease-in;
+            z-index: -9999;
+            
+            @keyframes slideIn {
+                0% {top: -1000px}
+                100% {top: 55px}
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+        a:link,
+        a:visited {
+            font-size: 1.5rem;
+
+                span {
+                font-size: 1.5rem;
+                font-weight: 600;
+                }
+
+                .new-badge {
+                font-size: 1rem;
+                }
+            }
+        }
     }
 
 `;
 
 export const NavBarWrapper = styled.div`
+
     ul {
         list-style: none;
         display: flex;
@@ -75,7 +151,7 @@ export const NavBarWrapper = styled.div`
         font-weight: 700;
     }
 
-    @media screen and (max-width: 1115px) {
+    @media screen and (max-width: 1125px) {
         a:link,
         a:visited {
             font-size: 1.2rem;
