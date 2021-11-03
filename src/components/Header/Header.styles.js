@@ -67,6 +67,26 @@ export const Content = styled.div`
             position: relative;
         }
 
+        .close-mobile-menu {
+            display: inline-block;
+            position: absolute;
+            top: -1400px;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: #c8c8c8;
+            height: 100vh;
+            width: 88%;
+            animation: slideOut .3s ease-in;
+            @keyframes slideOut {
+                0% {top: 55px}
+                100% {top: -1400px}
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 110%;
+            }
+        }
+
         .mobile-menu {
             display: inline-block;
             position: absolute;
@@ -77,11 +97,15 @@ export const Content = styled.div`
             height: 100vh;
             width: 88%;
             animation: slideIn .3s ease-in;
-            z-index: -9999;
+            z-index: 9999;
             
             @keyframes slideIn {
-                0% {top: -1000px}
+                0% {top: -1400px}
                 100% {top: 55px}
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 110%;
             }
         }
 

@@ -16,8 +16,13 @@ const Header = () => {
             setMenuOpen(true);
         } else if (menuOpen) {
             menuIcon.current.style.backgroundColor = 'transparent';
+            menu.current.classList.add('close-mobile-menu');
             menu.current.classList.remove('mobile-menu');
             setMenuOpen(false);
+            //Removes the close-mobile-menu class/animation incase the window is resized 
+            setTimeout(() => {
+                menu.current.classList.remove('close-mobile-menu');
+            }, 1000);
         }
     }
 

@@ -5,31 +5,14 @@ import {Wrapper, Content, BlogPost} from "./BlogSection.styles";
 
 const BlogSection = () => {
     const slideShow = useRef(null);
-    // const [screenChange, setScreenChange] = useState(false);
+    const firstSlide = useRef(null);
 
-    // const screenDidChange = () => {
-    //     setTimeout(() => {
-    //         setScreenChange(true);
-    //     }, 5000)
-    // }
-
-    // window.addEventListener('resize', screenDidChange) 
+    let vw = window.innerWidth;
 
     const changeSlide = (slide) => {
         slideShow.current.style.gap = `${vw-1420}px`;
         slideShow.current.style.transform = `translateX(${slide}px)`;
     }
-
-    let vw = window.innerWidth;
-    
-    // useEffect(() => {
-    //     if (screenChange) {
-    //         let newvw = window.innerWidth;
-    //         slideShow.current.style.gap = `${newvw-1420}px`;
-    //         slideShow.current.style.transform = `translateX(0px)`;
-    //         setScreenChange(false);
-    //     }
-    // },[screenChange])
 
     return (
         <Wrapper>
@@ -91,7 +74,7 @@ const BlogSection = () => {
                 
             </Content>
                 <div className="slider-btns">
-                    <button onClick={() => {changeSlide(0)}}></button>
+                    <button ref={firstSlide} onClick={() => {changeSlide(0)}}></button>
                     <button onClick={() => {changeSlide(-vw)}}></button>
                     <button onClick={() => {changeSlide(-vw*2)}}></button>
                     <button onClick={() => {changeSlide(-vw*3)}}></button>

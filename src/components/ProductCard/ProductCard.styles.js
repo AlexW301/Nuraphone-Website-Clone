@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    height: 438px;
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
+    height: auto;
     padding: 0 20px;
     margin-bottom: 100px;
 
 `;
 
 export const ProductImage = styled.img`
-    height: 250px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
 `;
 
 export const Content = styled.div`
