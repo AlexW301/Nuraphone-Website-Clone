@@ -7,12 +7,28 @@ export const Wrapper = styled.div`
     padding: 0 20px;
     margin-bottom: 100px;
 
+    @media screen and (max-width: 991px) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 490px) {
+        text-align: center;
+    }
 `;
 
 export const ProductImage = styled.img`
     width: 100%;
     max-width: 250px;
     height: auto;
+
+    @media screen and (max-width: 991px) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 490px) {
+        width: 250px;
+        max-width: 250px;
+    }
 `;
 
 export const Content = styled.div`

@@ -1,15 +1,65 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 //Styles
 import { Wrapper, Content, ProductsGrid } from "./ProductsSection.styles";
 //Components
 import ProductCard from "../ProductCard";
 
 const ProductsSection = () => {
+    const productsGrid = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(1);
+    const [needResize, setNeedResize] = useState(true);
+
+    const moveSlide = (value, slide) => {
+        productsGrid.current.style.transform = `translate(${value})`;
+        setCurrentSlide(slide);
+    }
+
+    const moveRight = () => {
+        if (currentSlide === 1) {
+            moveSlide('-100%', 2);
+        } else if (currentSlide === 2) {
+            moveSlide('-200%', 3);
+        } else if (currentSlide === 3) {
+            moveSlide('-300%', 4);
+        } else if (currentSlide === 4) {
+            moveSlide('0%', 1);
+        }
+    }
+
+    const moveLeft = () => {
+        if (currentSlide === 1) {
+            moveSlide('-300%', 4);
+        } else if (currentSlide === 4) {
+            moveSlide('-200%', 3);
+        } else if (currentSlide === 3) {
+            moveSlide('-100%', 2);
+        } else if (currentSlide === 2) {
+            moveSlide('0%', 1);
+        }
+    }
+
+    // NEED TO FIX TRANSFORM/TRANSLATE ON RESIZE OF WINDOW GRID NOT SHOWING UP
+
+    // const onResize = () => {
+    //     if(needResize) {
+    //         setNeedResize(false)
+    //         setTimeout(() => {
+    //             console.log('resize')
+    //             setNeedResize(true)
+    //         }, 5000)
+    //     } else if (!needResize) {
+    //         return
+    //     }
+    // }
+
+    // window.addEventListener('resize', onResize)
+
     return (
         <Wrapper>
             <Content>
                 <h2 className="products-heading">Explore our product range</h2>
-                <ProductsGrid>
+                <button onClick={() => {moveLeft();}} className="left-btn"><svg className="left-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Chevron Back</title><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/></svg></button>
+                <ProductsGrid ref={productsGrid}>
                     <ProductCard
                     image="https://www.nuraphone.com/cdn-global/5b2c8a9fa49e8e2d4604e60b/61398cbb3144e584172a34c5_nurabuds-512w-75.jpg"
                     name="buds"
@@ -38,6 +88,7 @@ const ProductsSection = () => {
                     link="#" 
                     />
                 </ProductsGrid>
+                <button onClick={() => {moveRight();}} className="right-btn"><svg className="right-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="transparent" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg></button>
             </Content>
         </Wrapper>
     )
