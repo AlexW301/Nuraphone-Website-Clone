@@ -7,7 +7,6 @@ import ProductCard from "../ProductCard";
 const ProductsSection = () => {
     const productsGrid = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(1);
-    const [needResize, setNeedResize] = useState(true);
 
     const moveSlide = (value, slide) => {
         productsGrid.current.style.transform = `translate(${value})`;
@@ -40,13 +39,13 @@ const ProductsSection = () => {
 
     // NEED TO FIX TRANSFORM/TRANSLATE ON RESIZE OF WINDOW GRID NOT SHOWING UP
 
-    const onResize = () => {
-        if(productsGrid.current.style.transform !== 'translate(0%)' && window.innerWidth > '490px') {
-                productsGrid.current.style.transform = 'translate(0%)';
-        }
-    }
+    // const onResize = () => {
+    //     if(productsGrid.current.style.transform !== 'translate(0%)' && window.innerWidth > '490px') {
+    //             productsGrid.current.style.transform = 'translate(0%)';
+    //     }
+    // }
 
-    window.addEventListener('resize', onResize)
+    // window.addEventListener('resize', onResize)
 
     return (
         <Wrapper>
