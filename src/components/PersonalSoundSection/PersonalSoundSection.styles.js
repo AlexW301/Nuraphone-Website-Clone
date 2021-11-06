@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
     width: 100%;
     background-color: #F8F8F8;
     padding: 70px;
+
+    @media screen and (max-width: 827px) {
+        padding: 70px 0;
+    }
 `;
 
 export const ContentWrapper = styled.div`
@@ -77,5 +81,25 @@ export const Content = styled.div`
     .learn-more:hover,
     .learn-more:active {
 
+    }
+
+    @media screen and (max-width: 1070px) {
+        .heading {
+            font-size: 5rem;
+        }
+
+        .desc-1 {
+            font-size: 2rem;
+        }
+
+        .desc-2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 827px) {
+        .desc-1, .desc-2 {
+            width: 100%;
+        }
     }
 `;
