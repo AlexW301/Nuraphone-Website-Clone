@@ -14,7 +14,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px 40px;
     height: 100%;

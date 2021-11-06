@@ -40,19 +40,13 @@ const ProductsSection = () => {
 
     // NEED TO FIX TRANSFORM/TRANSLATE ON RESIZE OF WINDOW GRID NOT SHOWING UP
 
-    // const onResize = () => {
-    //     if(needResize) {
-    //         setNeedResize(false)
-    //         setTimeout(() => {
-    //             console.log('resize')
-    //             setNeedResize(true)
-    //         }, 5000)
-    //     } else if (!needResize) {
-    //         return
-    //     }
-    // }
+    const onResize = () => {
+        if(productsGrid.current.style.transform !== 'translate(0%)' && window.innerWidth > '490px') {
+                productsGrid.current.style.transform = 'translate(0%)';
+        }
+    }
 
-    // window.addEventListener('resize', onResize)
+    window.addEventListener('resize', onResize)
 
     return (
         <Wrapper>
