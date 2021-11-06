@@ -5,6 +5,14 @@ export const Wrapper = styled.div`
     background-color: #191919;
     padding: 100px 0 110px;
     background-color: #191919;
+
+    @media screen and (max-width: 1000px) {
+        height: 380px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        height: 300px;
+    }
 `;
 
 export const Content = styled.div`
@@ -14,7 +22,7 @@ export const Content = styled.div`
     justify-content: center;
     height: 100%;
     margin: 0 auto;
-    max-width: 65%;
+    max-width: 95%;
     background-color: #191919;
 
     button {
@@ -62,7 +70,7 @@ export const Quote = styled.div`
         color: #FFFFFF;
         text-align: center;
         margin: 0 0 40px;
-        width: 1000px;
+        max-width: 1000px;
     }
 
     .author {
@@ -81,5 +89,25 @@ export const Quote = styled.div`
     .wired-img {
         height: 29.13px;
         width: 130px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .quote-content {
+        font-size: 3.5rem;
+    }
+
+    .author {
+        font-size: 2rem;
+    }
+    }
+
+    @media screen and (max-width: 600px) {
+        .quote-content {
+        font-size: 2.5rem;
+    }
+
+    .author {
+        font-size: 1.5rem;
+    }
     }
 `;
