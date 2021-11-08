@@ -10,7 +10,9 @@ const BlogSection = () => {
     let vw = window.innerWidth;
 
     const changeSlide = (slide) => {
-        slideShow.current.style.gap = `${vw-1420}px`;
+        if (vw > 1191) {
+            slideShow.current.style.gap = `${vw-1420}px`;
+        }
         slideShow.current.style.transform = `translateX(${slide}px)`;
     }
 

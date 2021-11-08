@@ -39,6 +39,23 @@ export const Wrapper = styled.div`
     .slider-btns button:focus {
         background-color: #fff;
     }
+
+    @media screen and (max-width: 1191px) {
+        .nurablog {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    @media screen and (max-width: 947px) {
+        height: 1000px;
+        padding: 120px 0 20px;
+
+        .nurablog {
+            position: absolute;
+            top: 0;
+        }
+    }
 `;
 
 export const Content = styled.div`
@@ -52,6 +69,14 @@ export const Content = styled.div`
    
     transition: transform ease-out 1500ms;
     transform: translateX(0px);
+
+    @media screen and (max-width: 1191px) {
+        padding: 0;
+        margin: 0 40px;
+        min-width: 100%;
+        max-width: 100%;
+        gap: 0;
+    }
 `;
 
 export const BlogPost = styled.div`
@@ -116,6 +141,104 @@ export const BlogPost = styled.div`
         text-decoration: none;
         border-bottom: 1px solid #fff;
         color: #fff;
+    }
+
+    @media screen and (max-width: 1191px) {
+        flex-direction: row;
+        height: 480px;
+        min-width: 100%;
+        max-width: 100%;
+        
+        img {
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+    }
+
+    .pic-one {
+        height: 350px;
+        width: 350px;
+    }
+
+    .pic-two {
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+    }
+
+    .post-content {
+        width: 405px;
+        height: 200.19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .post-heading {
+        font-size: 3.3rem;
+        margin: 20px 0 15px;
+    }
+
+    .post-para {
+        font-size: 2rem;
+        line-height: 36px;
+        margin: 0 0 40px;
+        color: #fff;
+    }
+
+    .link:link,
+    .link:visited { 
+        font-size: 1.5rem;
+    }
+    }
+
+    @media screen and (max-width: 947px) {
+        flex-direction: column;
+        height: 480px;
+        min-width: 100%;
+        max-width: 100%;
+        
+        img {
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+    }
+
+    .pic-one {
+        height: 350px;
+        width: 350px;
+    }
+
+    .pic-two {
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+    }
+
+    .post-content {
+        width: 405px;
+        height: 200.19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .post-heading {
+        font-size: 3.3rem;
+        margin: 20px 0 15px;
+    }
+
+    .post-para {
+        font-size: 2rem;
+        line-height: 36px;
+        margin: 0 0 40px;
+        color: #fff;
+    }
+
+    .link:link,
+    .link:visited { 
+        font-size: 1.5rem;
+    }
     }
 
 `;

@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 653px) {
+        height: 500px;
+    }
 `;
 
 export const Content = styled.div`
@@ -80,6 +84,21 @@ export const Content = styled.div`
             position: relative;
             grid-column: 2 / 3;
             grid-row: 1 / 2;
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 653px) {
+        grid-template-columns: 1fr;
+
+        .nav-1 {
+            grid-column: 1 / -2;
+        }
+
+        .social-icons {
+            position: relative;
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
             right: 0;
         }
     }
