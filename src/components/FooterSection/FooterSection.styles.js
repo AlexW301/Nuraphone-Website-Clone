@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
     display: grid;
-    width: 1200px;
+    min-width: 1200px;
     position: relative;
     margin: 0 276px;
     padding: 0 40px;
@@ -51,11 +51,36 @@ export const Content = styled.div`
         display: flex;
         gap: 10px;
         position: absolute;
-        right: 0;
+        right: 40px;
 
         img {
             height: 40px;
             width: 40px;
+        }
+    }
+
+    @media screen and (max-width: 1147px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        min-width: 100%;
+
+        .nura-logo {
+            
+        }
+
+        .footer-nav {
+            
+        }
+
+        .nav-1 {
+            grid-column: -3 / -2;
+        }
+
+        .social-icons {
+            position: relative;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            right: 0;
         }
     }
 `;

@@ -11,14 +11,14 @@ const FooterSection = () => {
                     <img src="https://www.nuraphone.com/cdn-global/5b2c8a9fa49e8e2d4604e60b/5eb0bfa5036072adf2e53b65_nura_wordmark_white.png" alt="nura-logo"/>
                 </div>
 
-                <div className="footer-nav">
+                <div className="footer-nav nav-1">
                     <a href="#">Blog</a>
                     <a href="#">Support</a>
                     <a href="#">Patents</a>
                     <a href="#">Upgrades</a>
                 </div>
 
-                <div className="footer-nav">
+                <div className="footer-nav nav-2">
                     <a href="#">Warranty &amp; Registration</a>
                     <a href="#">Returns &amp; Refund Policy</a>
                     <a href="#">Privacy</a>
